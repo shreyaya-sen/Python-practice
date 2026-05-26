@@ -1,0 +1,815 @@
+*****CHAPTER 1 VARIABLES AND DATA TYPES*****
+CHARACTER SET 
+LETTERS-A to Z or a to Zdigits- 0 to 9
+specific symbols--> +-*/ETC
+white spaces -->blank space tab carriage return newline formfeed
+other chracters -->python can process all ASCII and unicode
+ CHARACTER as part of DATA or liters
+ print(67) output 67 
+ VARIABLES<-- A NAME GIVEN TO A MEMORY LOCATION IN A PROGRAM
+ --FOR TYPING WORDS WE NEED TO ADD DOUBLE QOUTES BUT NOT FOR NUMBERS--
+
+
+ FOR EXAMPLE: IF WE Want to print shreya
+  we write print("shreya")
+   which gives shreya as outputbut 
+ if i want to write the value ie
+  name = shreya print(name)<-- this will not print name
+   instead it will print shreya 
+
+   also for example:
+   name= "shreya"<-- should be written in double quotes or error
+   age= 19 <-- this is means 19 value is 
+   getting stored in variable age
+   print("my name is:", name)
+   print("my age is:", age)
+   this will give output as 
+   my name is : shreya
+   my age is : 19
+
+   understand:
+   name = "shreya"
+age = 19 
+age2= age
+print("my name is :", name)
+print("my age is:",age2)
+
+output:
+my name is : shreya
+my age is: 19
+
+RULES FOR IDENTIFIERS
+identifiers can be combination of uppercase
+ lower case letters digits or an undercore(_)
+myVariable, variable_1, VARIABLE_for_print 
+all are valid python identifiers
+an identifier cant start with digit
+we cant use special symbols like !@#$% etc as indetifier
+it can be of any lenght
+also 1variable is not valid but variable1 is valid
+understand:
+print(type(name))
+print(type(age))
+print(type(price))
+
+output:<class 'str'>
+<class 'int'>
+<class 'float'>
+
+DATA TYPES 
+INTEGER(NUMBER), STRING("HELOO"), FLOAT(DECIMAL), BOOLEAN(T/F), NONE
+
+KEYWORDS ARE RESERVED WORDS IN python
+PYTHON IS CASESENCITIVE
+PRINT SUM:
+a = 2
+b = 5
+sum = a + b
+print(sum)
+output: 7
+TYPES OF TOKENS
+PUNCTUATORS are symbols to organize sentence structure in programing 
+(),{},@,[],#,-=,+=,/=,*= etc
+python is implicet we dont need to mention type
+ that is age = 22 here pthon makes it obv that it is a intiger 
+so no need to define like 
+in c we had to define here no need <--typed lang
+
+EXPRESSION EXECUTION 
+^STRING AND NUMERIC VALUES CAN OPERATE TOGETHER WITH *
+FOR EXAmple:
+A,B=2,3
+TXT="@"
+print(2*TXT*3)
+output:@@@@@@
+^STRING AND STRING CAN OPERATE WITH + <--concatination
+for example:
+a,b="2",3
+txt="@"
+print((a+txt)*b)
+output:2@2@2@
+2<-- a int NUMBER
+"2"<-- a STRING
+NUMERIC VALUES CAN OPERATE WITH ALL ARITHMETIC OPERATORS
+for example:
+a,b=2,3
+c=4
+print(a+b*c)//* has higher precedence
+output:14
+ARITHMETIC EXPRESSION WITH INTEGER AND FLOAT WILL RESULT A FLOAT
+for example:
+A,B=10,5.0
+C=A*B
+print(C)
+output:50.0
+RESULT OF DIVISION WITH TWO INTEGERS WILL BE FLOAT 
+A,B=1,2
+C=A/B
+print(C, A/B)
+output:
+0.5
+INTEGER DIVISION WITH FLOAT AND INT WILL GIVE INT DISPLAYED AS FLOAT
+A,B=1.5,3
+C=A//B
+print(C, A/B)
+output: 0.0 0.5
+ie if \\ we get a int value which is round off of float value
+ if float ans is 1.2 output will be int so ans is 1
+ 
+ FLOOR GIVES CLOSEST INTEGER WHICH IS LESSER 
+ THAN EQUAL TAHN OR EQUAL TO THE FLOAT VALUE FOR EXAMPLE 0.1<--0 5.2<--5
+ RESULT OF (A//B) IS SAME AS FLOOR (A/B)
+FOR NEGATIVE VALUES 
+
+
+A,B=-12,5
+C=A//B
+print(C, A/B)
+OUTPUT:-3 
+EVEN WHEN ANS WAS -2.4 COMPILER COVERTED INTO INT VALUE AND GAVE THE SMALLEST VALUE 
+note: in negative -3 is smaller than -2
+
+REMAINDER IS NEGATIVE WHEN DENOMINATOR IS NEGATIVE
+A,B=-5,2
+C=A%b
+print(C)
+output:1<-- even when numerator 
+was negative we dont get negative value
+A,B=5,2
+C=A%B
+print(C)
+output:1
+A,B=5,-2
+C=A%B
+print(C)
+output:-1<-- only this negative as DENOMINATOR was negative
+
+COMMENTS IN PYTHON
+#single line COMMENTS
+"""this is
+   a multi-line
+   comment"""
+   
+INPUT IN PYTHON
+INPUT() STATEMENT IS USED TO ACCEPT VALUES 
+(USING KEYBOARD) FROM USER 
+^STRING INPUT
+name = input("name: ")
+^INT INPUT
+age = int(input("age: "))
+FLOAT INPUT
+price = float(input("price: "))
+name = input("name: ")
+age = int(input("age: "))
+price = float(input("price: "))
+print("my name is",name,"i am" ,age,"year old")
+output:
+name: shreya
+age: 19
+price: 9.0
+my name is shreya i am 19 year old
+
+
+logical operator are and or not
+** is a valid arithmatic operator in python
+not>and>or <---precedance
+
+CONDITIONAL STATEMENT 
+I- ELIF- ELSE(syntax)
+if [no space} (condition):
+four space statement1
+elif [no space} (condition):
+[four spaces} tatement2
+else:
+[four space} statementN
+
+python is an
+ indentation lang <--there is
+                  importance of spaces
+ for example:
+ light= input("light:")
+if(light=="red"):
+    print("stop")
+elif(light=="orange"):
+    print("be ready")
+elif(light=="green"):
+    print("go!")    
+else:
+    print("light is broken") 
+
+     marks =  int(input("enter marks:"))
+if(marks == 90):
+    print("A")
+elif(marks >= 80):
+    print("B") 
+elif(marks >= 70):
+    print("C")  
+else:
+    print("D")  
+
+SINGLE LINE IF/TERNARY OPERATORS
+<var>=<val1>if<condition>else<val2>
+food = input("food: ")
+eat = "yes" if food == "cake" else "no"
+print(eat)
+
+<stt1>if<condition>else<stt2>
+food = input("enter food:")
+print("sweet") if food == "cake" or food == "jalebi" else print("not sweet")
+  
+  ARITHMETIC OPERATORS
+ A ** B<-- a power B
+ RELATIONAL OPERATORS
+ TRUE OR FALSE
+ >=,!= ETC 
+ ASSIGNMENT OPERATORS
+ +=
+ -=
+ LOGICAL OPERATORS
+ NOT OR and
+
+ TYPE CONVERSION
+ TYPE CASTING 
+ FOR EXAMPLE : A=2(INT) B=3.0(FLOAT)<-- WHEN WE ADD WE GET A FLOAT VALUE
+ BUT WHEN A="2"(STRING) B=3.0 (FLOAT)<-- ADDING THIS IS NOT POSSIBLE WE CAN 
+ ADD THEM MANUALLY BY TYPE CASTING
+ FOR THAT WE NEED 
+ TO WRITE IT IN -->A=int("2")
+ in this way we can convert string to int 
+ this works only for numbers not for WORDS
+
+ we write   input("enter your name")<-- even in this way we can print what we need
+ we at the end get string as output
+
+
+ sum of 2 num which user will enter
+ num1= int(input("enter first number: "))
+num2= int(input("enter another number: "))
+
+print("this is the sum of those two numbers you entered:",num1 + num2)
+
+area of square
+side =float(input("enter side of square: "))
+print("this is the area of square: ",side*side)
+
+input 2 floating point num n print thier avg
+num1 =float(input("enter 1st number: ")) 
+num2 =float(input("enter 2nd number: "))
+print("this is the avg of the two numbers: ",(num1+num2)/2)
+
+intput 2 int num a n b 
+print true if a is greater than or equal to b if not print false
+num1 = int(input("enter 1st num:"))
+num2 = int(input("enter 2nd num:"))
+if(num1>=num2):
+    print("true")
+else:
+    print("false") 
+
+
+    *****CHAPTER 2 STRINGS AND CONDITIONAL STATEMENTS*****
+    string<-- is data type that stores a sequence of CHARACTER
+    double qoutes as well as single and triple " ",'',""" """
+    escape sequence chracters <-- for tab and next line we use \n <-- for next line \t <-- for tab
+    concatination:
+    we can add two STRINGS
+    "hello" + "world" ="helloworld"
+    lenght of str:tells the lenght
+    it also considers spaces 
+    str1= "ivy"
+len1=print(len(str1))
+str2= "baby"
+len2=print(len(str2))
+final_str=print(str1+str2) 
+len3=print(len(str1+" "+str2))
+#the empty space also counts
+INDEXING
+IVY_BABY
+01234567
+for example:
+str = "ivybaby"
+ch = str[4]
+print(ch)
+
+SLICING
+ACCESING PARTS OF A STRING
+str ="ivy baby"
+print(str[0:3])
+
+negative INDEXING
+A    P   P   L   E
+-5  -4  -3  -2  -1
+str ="apple"
+print(str[-3:-1]) output is pl not ple
+
+
+STRING FUNCTION
+
+str = "I am a coder."
+
+str.endswith("er.")   # returns true if string ends with substr
+str.capitalize()      # capitalizes 1st char
+str.replace(old, new) # replaces all occurrences of old with new
+str.find(word)        # returns 1st index of 1st occurrence
+str.count("am")       # counts the occurrence of substr in string
+
+INPUT USERS FIRST NAME N PRINT ITS lenght
+name=input("enter your name:")
+print("length of your name is:", len(name)) 
+
+COUNT NO OF TIMES OF $
+str = "hi,i am not rich but even i like to have dollors in my pocket $$$$$$$$"
+print(str.count("$"))
+
+# Lists in Python
+
+# A built-in data type that stores set of values
+# It can store elements of different types (integer, float, string, etc.)
+
+marks = [87, 64, 33, 95, 76]     # marks[0], marks[1]..
+
+student = ["Karan", 85, "Delhi"] # student[0], student[1]..
+
+student[0] = "Arjun"             # allowed in python
+
+len(student)                     # returns length
+                        strings are immutable<-- is accessable but cant be changed
+                        lists are mutable<--accessable and can be changed
+# List Slicing
+# Syntax: list_name[starting_idx : ending_idx] 
+# Note: ending index is not included
+
+marks = [87, 64, 33, 95, 76]
+
+print(marks[1:4])   # [64, 33, 95]
+print(marks[:4])    # same as marks[0:4] → [87, 64, 33, 95]
+print(marks[1:])    # same as marks[1:len(marks)] → [64, 33, 95, 76]
+print(marks[-3:-1]) # [33, 95]
+
+List Methods
+
+list = [2, 1, 3]
+
+list.append(4)          # adds one element at the end      [2, 1, 3, 4]
+
+list.sort()             # sorts in ascending order         [1, 2, 3]
+
+list.sort(reverse=True) # sorts in descending order        [3, 2, 1]
+
+list.reverse()          # reverses list                    [3, 1, 2]
+
+list.insert(idx, el)    # insert element at index
+
+
+list = [2, 1, 3, 1]
+
+list.remove(1)   # removes first occurrence of element   [2, 3, 1]
+
+list.pop(idx)    # removes element at idx
+
+tuples in python
+a built in data type that lets us create immutable sequence of values
+tup=(87, 64, 33,95,76) #tup[0],tup[1]
+tup[0] =43 #not allowed
+tup1=()
+tup2=(1,)<-- for a single tuple there should always be a comma
+tup3=(1,1,3)
+list mutable and tuples immutable
+
+tuple Methods
+tup =(2,1,3,1)
+tup.index(EL) #returns index of first occurrence 
+tup.index(1) is 1
+tup.count(EL) #counts total occurrence 
+tup.count(1) is 2
+
+                  ---questions---
+ask user three fav movies and store it in a list
+
+
+movies = []
+
+movie1=input("enter your 1st fav movie:") 
+movie2=input("enter your 2nd fav movie:") 
+movie3=input("enter your 3rd fav movie:")
+list=print(list[movie1:movie2:movie3]) #SLICING
+movies.append(movie1) #LISTS
+movies.append(movie2)
+movies.append(movie3)
+print(movies)
+
+CHECK IF LISTS CONTAIN A PALINDROME OF elements
+list1= [1,2,1]
+list2=[1,3,4]
+copy_list1 = list1.copy()
+copy_list1.reverse()
+if(copy_list1 == list1):
+    print("palindrome")
+else: 
+    print("not")
+    
+    COUNT THE NUMBER OF STUDENTS WITH THE A GRADE IN THE FOLL tuple
+    ["C","D",A,A,B,B,A]
+    grade = ("C","D","A","A","B","B","A")
+print(grade.count("A"))
+CREATE A LIST AND SORT THEM FROM "A" TO "D"
+USE[]<--FOR LISTS
+()<--tuple
+grade  = ["C","D","A","A","B","B","A"]
+grade.sort()
+print(grade)
+
+*****CHAPTER 4 DICTIONARY AND SET*****
+DICTIONARY IN PYTHON
+are used to store data values in key:value pairs
+ they are unordered 
+ ie it has no index like lists truple and string
+  mutable and dont allow
+   dublicate keys
+
+ info = {
+    "name1" : "shreya",
+     "name2" : "insha",
+      "name3" : "vishakha",
+      list : [1,2,3,4,5,6],
+      tuple : (1,2,3,4,5,6),
+}
+print(type(info))
+print(info["name1"]) # to show the particular part
+info["name2"] = "sakshi" #for changing the value
+print(info["name2"])
+null_dist = {}
+null_dist["name"] = "hey"
+print(null_dist)
+ 
+ NESTED DICTIONARY
+ student ={
+    "name" : "shreya",
+    "subject" : {
+        "maths" : 100,
+        "english" : 100,
+        "iks" : 100
+    }
+}
+print(student["subject"]["iks"])
+
+
+DICTIONARY Methods
+
+
+myDict.keys()        # returns all keys
+
+myDict.values()      # returns all values
+
+myDict.items()       # returns all (key, val) pairs as tuples
+
+myDict.get("key")    # returns the value according to key
+
+myDict.update(newDict)   # inserts the specified items to the dictionary
+
+
+student ={
+    "name" : "shreya",
+    "subject" : {
+        "maths" : 100,
+        "english" : 100,
+        "iks" : 100
+    }
+}
+print(student["subject"]["iks"])
+print(list(student.keys()))
+print(student.keys()) 
+print(len(student))#length of key ie student and subject
+print(len(list(student.keys())))
+print(student.values()) 
+print(list(student.values()))
+print(student.items())
+print(list(student.items()))
+pairs = list(student.items())
+print(pairs[0])
+student.update({"CITY" : "DELHI"})
+print(student)
+
+
+output:100
+['name', 'subject']
+dict_keys(['name', 'subject'])
+2
+2
+dict_values(['shreya', {'maths': 100, 'english': 100, 'iks': 100}])
+['shreya', {'maths': 100, 'english': 100, 'iks': 100}]
+dict_items([('name', 'shreya'), ('subject', {'maths': 100, 'english': 100, 'iks': 100})])
+[('name', 'shreya'), ('subject', {'maths': 100, 'english': 100, 'iks': 100})] 
+('name', 'shreya')
+{'name': 'shreya', 'subject': {'maths': 100, 'english': 100, 'iks': 100}, 'CITY': 'DELHI'}
+
+# Set in Python
+
+# Set is the collection of unordered items.
+# Each element in the set must be unique & immutable.
+
+nums = {1, 2, 3, 4}
+
+set2 = {1, 2, 2, 2}
+# repeated elements stored only once, so it resolved to {1, 2}
+
+null_set = set()   # empty set syntax
+in set we cant use lists or  dictionary
+collection = {
+    1,2,3,4,5,"hi","how do u do"
+} #if we write a value twice it wont give error but will not print it twice
+print(type(collection))
+print(collection)
+print(len(collection))
+#when we use empty 
+# with intension of set still
+#  the type will be printed as dict
+empty ={}
+print(type(empty))
+
+#sets are mutable but set elements are immutable
+collection.add(2)
+collection.add(78)
+collection.add(56)
+collection.add("shreya")
+collection.remove("hi")
+
+print(collection)
+#cant add together (1,2,3,4) as set is immutable ie hashable 
+print(len(collection))
+collection.clear()
+print(len(collection))
+collect = {
+   "4four","5five","hi45","how do u do"
+}
+print(collect.pop())
+print(collect.pop())
+collect = {
+   "4four","5five","hi45","how do u do"
+}
+collection = {
+    1,2,3,4,5,"hi","how do u do"
+}
+print(collection.union(collect)) 
+print(collection.intersection(collect))
+
+
+output:<class 'set'>
+{1, 2, 3, 4, 5, 'hi', 'how do u do'}
+7
+<class 'dict'>
+{1, 2, 3, 4, 5, 'shreya', 'how do u do', 78, 56}
+9
+0
+how do u do
+5five
+{1, 2, 3, 4, 5, 'hi', '4four', 'how do u do', '5five', 'hi45'}
+{'how do u do'}
+
+
+                  -----QUESTION------
+  Let's Practice
+
+Store following word meanings in a python dictionary :
+
+table : “a piece of furniture”, “list of facts & figures”
+
+cat : “a small animal”
+
+
+question = {
+    "table" :{ "a piece of furniture", "list of facts & figures" },
+
+"cat" : {"a small animal"}
+}
+print(question)  
+You are given a list of subjects for students. Assume one classroom is required for 1 subject. How many classrooms are needed by all students.
+
+“python”, “java”, “C++”, “python”, “javascript”,
+“java”, “python”, “java”, “C++”, “C”
+
+classroom = {"python", "java", "C++", "python", "javascript",
+"java", "python", "java", "C++", "C"}
+print(len(classroom))
+
+output=5
+
+
+make empty dict and add user marks to it
+
+marks = {}
+
+
+first = int(input("enter first subject:"))
+marks.update({"phy": first})
+second = int(input("enter second subject:"))
+marks.update({"maths": second})
+third = int(input("enter third subject:"))
+marks.update({"cfo": third})
+print(marks)
+
+output:enter first subject:0
+enter second subject:89
+enter third subject:90
+{'phy': 0, 'maths': 89, 'cfo': 90}
+
+
+figureout a way to store 9 n 9.0 
+as seperate values in the set
+
+values ={
+    9,9.0
+}
+print(values)
+#invalid as  both number will not be printed seperately 
+# python always assumes them to be a single same value
+new ={
+    "9",9.0
+}
+print(new)
+
+new2 ={
+    ("float","9.0"),
+    ("int","9")
+}
+print(new2)
+
+output:{9}
+{9.0, '9'}
+{('int', '9'), ('float', '9.0')}
+
+
+LOOPS IN PYTHON 
+USED TO Repeat INSTRUCTIONS 
+while loop 
+While condition:
+   #some work 
+For example 
+count = 1
+while count <= 5:
+    print("hey")
+    count = count + 1
+1 to 100
+
+i = 1
+while i <= 100:
+    print(i)
+    i = i + 1
+
+100 to 1 
+i = 100
+while i >= 1:
+    print(i) 
+    i = i - 1
+Print multiplication table of no n 
+n = int(input("enter a no:")) 
+i = 1
+while i <= 10:
+    print(n*i) 
+    i = i + 1
+Print the elements of the foll list using a loop 
+Nums = [1,4,9, 16,25,36,49,64,81,100]
+idx = 0
+while idx < len(Nums):
+    print(idx)
+    idx += 1
+
+    search for a num x in this tuple using loop
+    Nums = [1,4,9, 16,25,36,49,64,81,100]
+x = 36
+i = 0
+while i < len(Nums):
+    if(Nums[i] == x):
+        print("found at idx:", i)
+    i += 1
+    output:
+    found at idx:5
+
+    break and continue
+
+    break:USED TO TERMINATE THE LOOP WHEN 
+    ENCOUNTERED
+    CONTINUE: TERMINATES EXECUTION IN THE 
+    CURRENT ITERATION AND CONTINUES
+     EXECUTION OF THE LOOP WITH THE NEXT ITERATION
+     
+ LOOPS IN PYTHON
+ loops are used for sequential traversal list, string, tuples etc
+ for loops 
+ for el in list:
+     #some work
+
+for loop with else  
+for el(char,int,float) in list(tup etc): 
+    #some work 
+else:
+    #work when loop ends
+
+
+QUESTION using for 
+print elements of the foll list using a loop
+list = [12,13,14,15,16,17,18,19]
+for el in list:
+     print(el)
+output:    
+12
+13
+14
+15
+16
+17
+18
+19
+
+search for a num x in this tuple using loop
+num = (1,2,2,3,4,5,6,7,7,8,9)
+x = 2
+idx = 0
+for el in num:
+    if(el == x):
+        print("number found at idx:",idx)
+        idx += 1
+       output: number found at idx: 0
+number found at idx: 1
+
+range()
+range returns a sequence of numbers starting from 0 
+ by default and increments by 1(by defalut), and stops before a specified number
+ range(start?,stop,step?)
+ seq = range(5)
+for i in seq:
+    print(i)
+  output:
+0
+1
+2
+3
+4 
+stop dena is mandatory
+step means add it with start
+
+
+use for and range
+print num from 1 to 100
+for i in range(1,101):
+    print(i)
+    outptu :
+    1 to 100
+num from 100 to 1
+for i in range(100,0,-1):
+    print(i)
+    outptu :
+    100 to 1
+print the multiplication table of a num n 
+n = int(input("enter number:"))
+for i in range(1,11):
+    print(n * i)
+    output:
+    2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+ pass statement
+ those which give null value
+  
+  find sum of first n numbers using while
+n = 5
+sum = 0
+for i in range(1, 6):
+    sum += i
+print("the sum is:",sum)
+the sum is: 15
+while:
+n = 5
+sum = 0
+i = 1
+while i <= n:
+    sum += i
+    i += 1
+print("total sum:",sum)
+
+factorail of  first n num
+use for
+n = 4
+fact = 1
+for i in range(1,5):
+    fact *= i
+
+
+print("factorail is:",fact)
+use while
+n = 4
+fact = 1
+i = 1
+while i <= n:
+   
+    fact *= i
+    i += 1
+
+print("factorail is:",fact)
